@@ -58,7 +58,7 @@ module ThemesOnRails
     end
 
     def prefix_path
-      "#{Rails.root}/app/themes"
+      ActiveCollab.configuration.prefix_path
     end
 
     private
