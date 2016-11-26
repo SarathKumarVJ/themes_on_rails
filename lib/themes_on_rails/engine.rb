@@ -13,7 +13,7 @@ module ThemesOnRails
     end
 
     initializer 'themes_on_rails.assets_path' do |app|
-      Dir.glob("#{Rails.root}/app/themes/*/assets/*").each do |dir|
+      Dir.glob("#{ThemesOnRails.configuration.prefix_path}/*/assets/*").each do |dir|
         app.config.assets.paths << dir
       end
     end
